@@ -17,7 +17,7 @@ const Card = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   transition: 300ms;
-  cursor: "pointer"
+  cursor: pointer;
   &:hover {
     transform: translateY(-0.25rem);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
