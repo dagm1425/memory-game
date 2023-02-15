@@ -90,6 +90,10 @@ export default function Main() {
 
   return (
     <div>
+      <Scoreboard>
+        <H2>Score: {score}</H2>
+        <H2>Best Score: {bestScore}</H2>
+      </Scoreboard>
       <Grid>
         {dogs.map((dog) => {
           return (
@@ -103,10 +107,6 @@ export default function Main() {
           );
         })}
       </Grid>
-      <div style={{ margin: "2rem" }}>
-        <h2>Score: {score}</h2>
-        <h2>Best Score: {bestScore}</h2>
-      </div>
     </div>
   );
 }
@@ -117,4 +117,17 @@ const Grid = styled.div`
   margin: 3rem auto;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+`;
+
+const Scoreboard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  margin: 2rem auto;
+`;
+
+const H2 = styled.h2`
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 `;
